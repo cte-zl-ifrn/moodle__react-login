@@ -5,23 +5,23 @@ class Proitec extends Component {
     return (
       <div className="App" style={this.props.estado}>
         <div id="mainProitec">
-          <form>
+          <form method="post" action="https://ead.ifrn.edu.br/ava/proitec2018/login/index.php" role="form">
               <div className="group">
                   <h2>PROITEC</h2>
               </div>
               <div className="group">
-                  <input type="text" /><span className="highlight"></span><span className="bar"></span>
+                  <input type="text" className="form-control" required type="text" name="username" /><span className="highlight"></span><span className="bar"></span>
                   <label>Matrícula</label>
               </div>
               <div className="group">
-                  <input type="email" /><span className="highlight"></span><span className="bar"></span>
+                  <input className="form-control" type="password" name="password" /><span className="highlight"></span><span className="bar"></span>
                   <label>Senha</label>
               </div>
               <div className="group">
                   <a href="#">esqueci minha senha</a>
                   <br />
               </div>
-              <button type="button" className="button buttonGreen">ACESSAR O MOODLE
+              <button type="submit" className="button buttonGreen">ACESSAR O MOODLE
                   <div className="ripples buttonRipples"><span className="ripplesCircle"></span></div>
               </button>
           </form>

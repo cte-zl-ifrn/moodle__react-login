@@ -7,11 +7,25 @@ import Proitec from './pages/Proitec';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      academico: true,
-      presencial: false,
-      proitec: false
-    };
+    
+      this.getQueryVariable('ava') === 'presencial' ?
+      this.state = {
+        academico: false,
+        presencial: true,
+        proitec: false
+      }:
+      this.getQueryVariable('ava') === 'proitec' ?
+      this.state = {
+        academico: false,
+        presencial: false,
+        proitec: true
+      }:
+      this.state = {
+        academico: true,
+        presencial: false,
+        proitec: false
+      }
+    
   }
 
   academicoButton = () => {
@@ -43,9 +57,13 @@ class App extends Component {
     var vars = query.split("&");
     for (var i=0;i<vars.length;i++) {
             var pair = vars[i].split("=");
-            if(pair[0] == variable){return pair[1];}
+            if(pair[0] === variable){return pair[1];}
     }
     return(false);
+  }
+
+  handlerBlur = () => {
+    document.querySelector('input').classList.add('used');
   }
 
   render() {
@@ -53,7 +71,8 @@ class App extends Component {
       <div>
           { this.state.academico ?
           <Academico presencialBtn={this.presencialButton}
-                     proitecBtn={this.proitecButton} /> 
+                     proitecBtn={this.proitecButton}
+                     blur={this.handlerBlur} /> 
                      : null}
 
           { this.state.presencial ?
