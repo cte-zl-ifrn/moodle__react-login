@@ -24,6 +24,13 @@ class Presencial extends Component {
               <button type="submit" className="button buttonBlue">ACESSAR O MOODLE
                   <div className="ripples buttonRipples"><span className="ripplesCircle"></span></div>
               </button>
+              <div id="instanciaMoodleResponsive">
+                <hr width="80%" />
+                <ul>
+                    <li><a onClick={this.props.academicoBtn}>Acadêmico</a></li>
+                    <li><a onClick={this.props.proitecBtn}>PROITEC</a></li>
+                </ul>
+              </div>
           </form>
           <div id="instanciaMoodle">
               <p><img id="logo" src="https://ead.ifrn.edu.br/ava/academico/theme/boost_eadifrn/pix/eadifrn-logo.svg" alt="Logo IFRN EaD" /></p>

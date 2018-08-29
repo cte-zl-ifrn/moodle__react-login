@@ -24,6 +24,13 @@ class Proitec extends Component {
               <button type="submit" className="button buttonGreen">ACESSAR O MOODLE
                   <div className="ripples buttonRipples"><span className="ripplesCircle"></span></div>
               </button>
+              <div id="instanciaMoodleResponsive">
+                <hr width="80%" />
+                <ul>
+                    <li><a onClick={this.props.academicoBtn}>Acadêmico</a></li>
+                    <li><a onClick={this.props.presencialBtn}>Presencial</a></li>
+                </ul>
+              </div>
           </form>
           <div id="instanciaMoodle">
               <p><img id="logo" src="https://ead.ifrn.edu.br/ava/proitec2018/theme/boost_proitec/pix/proitec-logo.png" alt="Logo IFRN EaD" /></p>
