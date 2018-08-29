@@ -332,3 +332,24 @@ input:focus ~ .highlight {
 #instanciaMoodle a:hover {
 	color: #fafafa;
 }
+
+/* 
+===============================================
+=============== Responsividade ================
+===============================================
+*/
+
+@media (max-width: 734px){
+	#instanciaMoodle {
+		display: none;
+	}
+
+	form {
+		float: none;
+		margin: 0 auto;
+	}
+
+	#main {
+		width: 100%;
+	}
+}
