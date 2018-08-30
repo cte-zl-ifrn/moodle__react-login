@@ -10,11 +10,11 @@ class Academico extends Component {
                   <h2>ACADÊMICO</h2>
               </div>
               <div className="group">
-                  <input type="text" className="form-control" required type="text" name="username" onBlur={(event) => this.props.blur(event)} /><span className="highlight"></span><span className="bar"></span>
+                  <input id="text" type="text" className="form-control" required type="text" name="username" onBlur={(event) => this.props.blurText(event)} /><span className="highlight"></span><span className="bar"></span>
                   <label>Matrícula</label>
               </div>
               <div className="group">
-                  <input className="form-control" type="password" name="password" onBlur={(event) => this.props.blur(event)} /><span className="highlight"></span><span className="bar"></span>
+                  <input id="password" className="form-control" type="password" name="password" onBlur={(event) => this.props.blurPassword(event)} /><span className="highlight"></span><span className="bar"></span>
                   <label>Senha</label>
               </div>
               <div className="group">

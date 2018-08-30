@@ -62,8 +62,22 @@ class App extends Component {
     return(false);
   }
 
-  handlerBlur = () => {
-    document.querySelector('input').classList.add('used');
+  // Actions
+
+  blurText = (event) => {
+    let value = event.target.value;
+
+    value.length > 0 ?
+    document.getElementById('text').classList.add('used'):
+    document.getElementById('text').classList.remove('used');
+  }
+
+  blurPassword = (event) => {
+    let value = event.target.value;
+
+    value.length > 0 ?
+    document.getElementById('password').classList.add('used'):
+    document.getElementById('password').classList.remove('used');
   }
 
   render() {
@@ -72,17 +86,22 @@ class App extends Component {
           { this.state.academico ?
           <Academico presencialBtn={this.presencialButton}
                      proitecBtn={this.proitecButton}
-                     blur={this.handlerBlur} /> 
+                     blurText={this.blurText}
+                     blurPassword={this.blurPassword} /> 
                      : null}
 
           { this.state.presencial ?
           <Presencial academicoBtn={this.academicoButton}
-                      proitecBtn={this.proitecButton} /> 
+                      proitecBtn={this.proitecButton}
+                      blurText={this.blurText}
+                      blurPassword={this.blurPassword} /> 
                       : null}
 
           { this.state.proitec ?
           <Proitec academicoBtn={this.academicoButton}
-                   presencialBtn={this.presencialButton} /> 
+                   presencialBtn={this.presencialButton}
+                   blurText={this.blurText}
+                   blurPassword={this.blurPassword} /> 
                   : null}                  
       </div>
     );

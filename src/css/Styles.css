@@ -106,9 +106,10 @@ input:focus ~ label, input.used ~ label {
 	color: #3eb24f;
 }
 
-#mainPresencial input:focus ~ label, input.used ~ label {
+#mainPresencial input:focus ~ label, #mainPresencial input.used ~ label {
   color: #5d81c1;
 }
+
 
 
 /* Underline */

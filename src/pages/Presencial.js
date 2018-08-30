@@ -10,11 +10,11 @@ class Presencial extends Component {
                   <h2>PRESENCIAL</h2>
               </div>
               <div className="group">
-                  <input type="text" className="form-control" required type="text" name="username" /><span className="highlight"></span><span className="barPresencial"></span>
+                  <input id="text" type="text" className="form-control" required type="text" name="username" onBlur={(event) => this.props.blurText(event)} /><span className="highlight"></span><span className="barPresencial"></span>
                   <label>Matrícula</label>
               </div>
               <div className="group">
-                  <input className="form-control" type="password" name="password" /><span className="highlight"></span><span className="barPresencial"></span>
+                  <input id="password" className="form-control" type="password" name="password" onBlur={(event) => this.props.blurPassword(event)} /><span className="highlight"></span><span className="barPresencial"></span>
                   <label>Senha</label>
               </div>
               <div className="group">
