@@ -18,7 +18,7 @@ class Proitec extends Component {
                   <label>Senha</label>
               </div>
               <div className="group">
-                  <a href="#">esqueci minha senha</a>
+                  <a href="https://suap.ifrn.edu.br/comum/solicitar_trocar_senha/">esqueci minha senha</a>
                   <br />
               </div>
               <button type="submit" className="button buttonGreen">ACESSAR O MOODLE
